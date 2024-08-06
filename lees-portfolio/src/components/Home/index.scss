@@ -1,0 +1,22 @@
+.homePage {
+    .textZone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-width: 90%;
+    }
+
+    h1 {
+        color: white;
+        font-size: 40px;
+        margin: 0;
+        font: 'Coolvetica';
+
+        img {
+            width: 60px;
+
+        }
+    }
+}
