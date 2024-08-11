@@ -1,3 +1,5 @@
+$lees-pink: #d84ecd;
+
 .homePage {
     .textZone {
         position: absolute;
@@ -18,6 +20,9 @@
         margin: 0;
         font: 'Coolvetica';
         font-weight: 400;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 1s;
 
         @media (max-width: 770px) {
             font-size: 22px;
@@ -28,17 +33,19 @@
             content: '<h1>';
             font-family: 'La Belle Aurore', cursive;
             font-size: 18px;
-            color: #d84ecd;
+            color: $lees-pink;
             margin-top: -40px;
             left: 17px;
             opacity: 0.5;
+            position: absolute;
+            animation: fadeIn 1s 1.7s backwards;
         }
 
         &::after {
             content: '</h1>';
             font-family: 'La Belle Aurore', cursive;
             font-size: 18px;
-            color: #d84ecd;
+            color: $lees-pink;
             margin-top: 18px;
             margin-left: 20px;
             opacity: 0.5;
@@ -52,27 +59,30 @@
             height: auto;
             opacity: 0.7;
             animation: fadeIn 1s linear both;
-            animation-delay: 1.4s;
+            animation-delay: 1s;
 
             @media (max-width: 770px) {
                 width: 47px;
                 margin: -4px 5px;
             }
         }
+    }
 
-        h2 {
-            color: white;
-            margin-top: 20px;
-            font-weight: 400;
-            font-size: 11px;
-            font-family: sans-serif;
-            letter-spacing: 3px;
-            animation: fadeIn 1s 1.8s backwards;
-        }
+    h2 {
+        color: $lees-pink;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 12px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 1.8s;
+
     }
 
     .flat-button {
-        color: #d84ecd;
+        color: $lees-pink;
         font-size: 13px;
         font-weight: 400;
         letter-spacing: 4px;
@@ -82,13 +92,24 @@
         border: 1px solid #d84ecd;
         margin-top: 25px;
         float: left;
-        animation: fadeIn 1s 1.9s backwards;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 1.9s;
         white-space: nowrap;
 
         &:hover {
             background: #d84ecd;
             color: white;
         }
+    }
+}
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

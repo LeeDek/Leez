@@ -1,3 +1,5 @@
+$lees-pink: #d84ecd;
+
 .page {
     // padding: 2rem 10rem;
 }
@@ -8,8 +10,9 @@
 }
 
 .tags {
-    color: white;
-    opacity: 0.6;
+    color: $lees-pink;
+    opacity: 0.5;
+    font-family: 'La Belle Aurore';
     position: absolute;
     bottom: 0;
     left: 120px;
