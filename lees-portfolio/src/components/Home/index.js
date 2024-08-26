@@ -7,28 +7,17 @@ import '../Layout/index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animation')
-  const jobArray = [
-    'w',
-    'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-  ]
+  const [letterClass, setLetterClass] = useState('text-animate')
+  const jobArray1 = ['W', 'e', 'b']
+  const jobArray2 = ['D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover')
+      console.log('letterClass updated to text-animate-hover')
     }, 4000)
-    return () => clearTimeout(timer)
+
+    return () => clearTimeout(timeoutId)
   }, [])
 
   return (
@@ -40,13 +29,21 @@ const Home = () => {
           <br />
           <span className={`${letterClass} _13`}>I</span>
           <span className={`${letterClass} _14`}>'m</span>
+          <span className={`${letterClass} _15`}>
+            <img className="leeLogo" src={leeLogo} alt="developer" />
+          </span>
 
-          <img src={leeLogo} alt="developer" />
           <br />
           <AnimatedLetters
             letterClass={letterClass}
-            strArray={jobArray}
-            idx={0}
+            strArray={jobArray1}
+            idx={15}
+          />
+          <span className={letterClass}>&nbsp;</span>
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={jobArray2}
+            idx={22}
           />
         </h1>
         <h2>Full-Stack Developer</h2>

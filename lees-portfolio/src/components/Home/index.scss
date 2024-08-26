@@ -53,20 +53,10 @@ $lees-pink: #d84ecd;
             animation: fadeIn 1s 1.7s backwards;
         }
 
-        img {
-            width: 77px;
-            margin: -6px 5px;
-            height: auto;
-            opacity: 0.7;
-            animation: fadeIn 1s linear both;
-            animation-delay: 1s;
 
-            @media (max-width: 770px) {
-                width: 47px;
-                margin: -4px 5px;
-            }
-        }
     }
+
+
 
     h2 {
         color: $lees-pink;
@@ -111,5 +101,24 @@ $lees-pink: #d84ecd;
 
     100% {
         opacity: 1;
+    }
+}
+
+.leeLogo {
+    width: 77px;
+    margin: -6px 5px;
+    height: auto;
+    opacity: 0.5;
+    animation: fadeIn 1s linear both;
+    animation-delay: 1s;
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    @media (max-width: 770px) {
+        width: 47px;
+        margin: -4px 5px;
     }
 }
