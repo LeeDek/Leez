@@ -35,10 +35,10 @@ $lees-pink: #d84ecd;
             font-size: 18px;
             color: $lees-pink;
             margin-top: -40px;
-            left: 17px;
+            left: 3px;
             opacity: 0.5;
             position: absolute;
-            animation: fadeIn 1s 1.7s backwards;
+            // animation: fadeIn 1s 1.7s backwards;
         }
 
         &::after {
@@ -46,17 +46,17 @@ $lees-pink: #d84ecd;
             font-family: 'La Belle Aurore', cursive;
             font-size: 18px;
             color: $lees-pink;
-            margin-top: 18px;
+            margin-top: 28px;
             margin-left: 20px;
             opacity: 0.5;
             position: absolute;
-            animation: fadeIn 1s 1.7s backwards;
+            // animation: fadeIn 1s 1.7s forwards;
+
+            @media (max-width: 770px) {
+                margin-top: 12px;
+            }
         }
-
-
     }
-
-
 
     h2 {
         color: $lees-pink;
