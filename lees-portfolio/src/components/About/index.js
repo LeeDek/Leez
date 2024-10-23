@@ -16,8 +16,7 @@ const About = () => {
           imagination and a clear vision for creating high-quality user
           experiences. I love bringing ideas to life through vibrant colors,
           sleek designs, and dynamic animations, making sure every interface is
-          engaging and easy to use. I’m driven by a deep interest in UX/UI and
-          creating visually stunning, functional digital spaces.
+          engaging and intuitive.
         </p>
         <p>
           I’m a naturally curious and hardworking developer who thrives in

@@ -59,5 +59,36 @@ $lees-pink: #d84ecd;
             position: relative;
             margin-bottom: 40px;
         }
+
+        &::before {
+            content: '<h1>';
+            font-family: 'la belle aurore';
+            font-size: 18px;
+            position: absolute;
+            margin-top: -10px;
+            left: -10px;
+            opacity: 0.6;
+            line-height: 18px;
+        }
+
+        &::after {
+            content: '</h1>';
+            font-family: 'la belle aurore';
+            font-size: 18px;
+            line-height: 18px;
+            position: absolute;
+            left: 210px;
+            top: 45px;
+            opacity: 0.6;
+            margin-left: 20px;
+        }
+
+        p {
+            font-size: 13px;
+            font-family: sans-serif;
+            color: #dcdad0;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
     }
 }
