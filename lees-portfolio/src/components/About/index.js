@@ -1,7 +1,29 @@
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+import '../Layout/index.scss'
+import { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faReact,
+  faNodeJs,
+  faHtml5,
+  faCss3,
+  faJs,
+  faGithub,
+} from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
+  const [letterClass, setLetterClass] = useState('text-animate')
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLetterClass('text-animate-hover')
+      console.log('letterClass updated to text-animate-hover')
+    }, 4000)
+
+    return () => clearTimeout(timeoutId)
+  }, [])
+
   return (
     <div className="container about-page">
       <div className="text-zone">
@@ -9,6 +31,7 @@ const About = () => {
           <AnimatedLetters
             strArray={['A', 'b', 'o', 'u', 't', ' ', 'M', 'e']}
             idx={15}
+            letterClass={letterClass}
           />
         </h1>
         <p>
@@ -31,6 +54,28 @@ const About = () => {
           ensuring that my work stands out through tailored solutions and
           creative thinking.
         </p>
+      </div>
+      <div className="stage-cube-cont">
+        <div className="cubespinner">
+          <div className="face1">
+            <FontAwesomeIcon icon={faReact} color="#00DCFF" />
+          </div>
+          <div className="face2">
+            <FontAwesomeIcon icon={faCss3} color="#2465F1" />
+          </div>
+          <div className="face4">
+            <FontAwesomeIcon icon={faJs} color="#EACA31" />
+          </div>
+          <div className="face3">
+            <FontAwesomeIcon icon={faHtml5} color="#E54C21" />
+          </div>
+          <div className="face6">
+            <FontAwesomeIcon icon={faNodeJs} color="#40A15C" />
+          </div>
+          <div className="face5">
+            <FontAwesomeIcon icon={faGithub} color="#5E227F" />
+          </div>
+        </div>
       </div>
     </div>
   )

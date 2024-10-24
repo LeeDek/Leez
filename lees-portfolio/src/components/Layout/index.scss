@@ -51,7 +51,7 @@ $lees-pink: #d84ecd;
         max-height: 90%;
         opacity: 0;
         animation: fadeInContent 1s forwards;
-        animation-delay: 1.7s;
+        animation-delay: 1.5s;
 
 
         h1 {
@@ -62,7 +62,18 @@ $lees-pink: #d84ecd;
             margin-top: 0;
             position: relative;
             margin-bottom: 40px;
-            animation-delay: 1.8s;
+            animation: fadeInContent 1s forwards;
+            animation-delay: 1.7s;
+
+            .text-animate-hover {
+                &:hover {
+                    color: white
+                }
+            }
+
+            @media (max-width: 770px) {
+                font-size: 28px;
+            }
 
         }
 
@@ -72,7 +83,7 @@ $lees-pink: #d84ecd;
             font-size: 18px;
             position: absolute;
             margin-top: -10px;
-            left: -10px;
+            left: 0;
             opacity: 0.6;
             line-height: 18px;
         }
@@ -83,10 +94,14 @@ $lees-pink: #d84ecd;
             font-size: 18px;
             line-height: 18px;
             position: absolute;
-            left: 210px;
-            top: 45px;
+            left: -20px;
+            top: 75px;
             opacity: 0.6;
             margin-left: 20px;
+
+            @media (max-width: 770px) {
+                top: 40px;
+            }
         }
 
         p {
@@ -95,6 +110,7 @@ $lees-pink: #d84ecd;
             font-family: sans-serif;
             font-weight: 300;
             min-width: fit-content;
+            // opacity: 0; // Start hidden
             animation: pulse 1s forwards;
 
             &:nth-of-type(1) {
