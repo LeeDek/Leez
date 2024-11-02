@@ -1,7 +1,7 @@
 $lees-pink: #d84ecd;
 
 .page {
-    // padding: 2rem 10rem;
+    min-width: 300px;
 }
 
 .top-tags {
@@ -62,7 +62,7 @@ $lees-pink: #d84ecd;
             font-weight: 400;
             margin-top: 0;
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             animation: fadeInContent 1s forwards;
             animation-delay: 1.7s;
 

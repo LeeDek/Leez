@@ -18,7 +18,7 @@ const Contact = () => {
     <>
       <div className="container contact-page">
         <div className="text-zone">
-          <h1>
+          <h1 className="contact-title">
             <AnimatedLetters
               letterClass={letterClass}
               strArray={['C', 'o', 'n', 't', 'a', 'c', 't', '', 'M', 'e']}
@@ -47,6 +47,7 @@ const Contact = () => {
                     required
                   />
                 </li>
+
                 <li>
                   <input
                     placeholder="Subject"

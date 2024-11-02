@@ -39,7 +39,7 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faEnvelope} color="#644963" />
         </NavLink>
       </nav>
-      <ul>
+      <ul className="view-profile">
         <li>
           <a
             target="_blank"
