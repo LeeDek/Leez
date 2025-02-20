@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
-import leeLogo from '../../assets/images/Lee_logo.png'
 import { Link } from 'react-router-dom'
-import './index.scss'
 import '../../App.scss'
-import '../Layout/index.scss'
 import AnimatedLetters from '../AnimatedLetters'
+import '../Layout/index.scss'
+import './index.scss'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')

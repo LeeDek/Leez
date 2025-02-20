@@ -1,10 +1,12 @@
 import Loader from 'react-loaders'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const refForm = useRef()
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -14,6 +16,27 @@ const Contact = () => {
 
     return () => clearTimeout(timeoutId)
   }, [])
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        'service_1xipec7',
+        'template_rs8r7y6',
+        refForm.current,
+        'Huxc-2CrDpEIpy13B'
+      )
+      .then(
+        () => {
+          alert('Message successfuly sent!')
+          window.location.reload(false)
+        },
+        () => {
+          alert('Failed to send message, please try again')
+        }
+      )
+  }
+
   return (
     <>
       <div className="container contact-page">
@@ -34,7 +57,7 @@ const Contact = () => {
             out using the form below.
           </p>
           <div className="contact-form">
-            <form>
+            <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
                   <input type="text" name="name" placeholder="Name" required />
