@@ -55,7 +55,8 @@ $lees-pink: #d84ecd;
     animation-delay: 1.5s;
 
     @media screen and (max-width: 800px) {
-      transform: translateY(-20%) translateX(20%);
+      min-width: 300px;
+      transform: translateY(-47%);
     }
 
     h1 {
