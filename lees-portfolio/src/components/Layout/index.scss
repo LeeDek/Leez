@@ -1,0 +1,139 @@
+$lees-pink: #d84ecd;
+
+.page {
+  min-width: 300px;
+}
+
+.top-tags {
+  bottom: auto;
+  top: 35px;
+}
+
+.tags {
+  color: $lees-pink;
+  opacity: 0.5;
+  font-family: 'La Belle Aurore';
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  font-size: 18px;
+  font: 'La Belle Aurore';
+}
+
+.bottom-tag-html {
+  margin-left: -20px;
+}
+
+.container {
+  width: 100%;
+  will-change: contents;
+  height: 90%;
+  min-height: 566px;
+  position: absolute;
+  opacity: 0.9;
+  top: 5%;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+.about-page,
+.contact-page {
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%) translateX(35%);
+    width: 35%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+    opacity: 0;
+    animation: fadeInContent 1s forwards;
+    animation-delay: 1.5s;
+
+    @media screen and (max-width: 790px) {
+      min-width: 300px;
+      transform: translateY(-47%);
+    }
+
+    h1 {
+      font-size: 53px;
+      font-family: 'Coolvetica';
+      color: $lees-pink;
+      font-weight: 400;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 25px;
+      animation: fadeInContent 1s forwards;
+      animation-delay: 1.7s;
+
+      .text-animate-hover {
+        &:hover {
+          color: white;
+        }
+      }
+
+      @media (max-width: 770px) {
+        font-size: 32px;
+      }
+    }
+
+    &::before {
+      content: '<h1>';
+      font-family: 'la belle aurore';
+      font-size: 18px;
+      position: absolute;
+      margin-top: -10px;
+      left: 0;
+      opacity: 0.6;
+      line-height: 18px;
+    }
+
+    &::after {
+      content: '</h1>';
+      font-family: 'la belle aurore';
+      font-size: 18px;
+      line-height: 18px;
+      position: absolute;
+      left: -20px;
+      top: 75px;
+      opacity: 0.6;
+      margin-left: 20px;
+
+      @media (max-width: 770px) {
+        top: 40px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: #dcdad0;
+      font-family: sans-serif;
+      font-weight: 300;
+      min-width: fit-content;
+      // opacity: 0; // Start hidden
+      animation: pulse 1s forwards;
+
+      &:nth-of-type(1) {
+        animation-delay: 2.3s;
+      }
+
+      &:nth-of-type(2) {
+        animation-delay: 2.6s;
+      }
+
+      &:nth-of-type(3) {
+        animation-delay: 2.9s;
+      }
+    }
+  }
+}
+
+@keyframes fadeInContent {
+  to {
+    opacity: 1;
+  }
+}

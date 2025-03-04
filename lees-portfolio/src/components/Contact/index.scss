@@ -1,0 +1,123 @@
+$lees-pink: #d84ecd;
+
+.contact-page {
+  padding-top: 2.8rem;
+  overflow-y: auto;
+
+  .contact-title {
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 28px;
+    }
+  }
+
+  .text-zone {
+    min-width: 300px;
+
+    .contact-text {
+      font-size: 15px;
+    }
+  }
+
+  .contact-form {
+    width: 100%;
+    min-width: 290px;
+    margin-top: 20px;
+
+    :focus {
+      outline: none;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-bottom: 10px;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        opacity: 0;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
+        clear: both;
+      }
+
+      li.half {
+        width: 49%;
+        margin-left: 2%;
+        float: left;
+        clear: none;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    li.full-width {
+      width: 100%;
+      clear: both;
+    }
+
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      border: 0;
+      background: #65174d;
+      height: 50px;
+      font-size: 16px;
+      border-radius: 2px;
+      color: #fff;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      border: 0;
+      background: #65174d;
+      height: 50px;
+      font-size: 16px;
+      border-radius: 2px;
+      color: #fff;
+      padding: 20px;
+      min-height: 150px;
+      box-sizing: border-box;
+    }
+
+    .flat-button {
+      color: $lees-pink;
+      background: transparent;
+      margin-top: 25px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      font-family: sans-serif;
+      text-decoration: none;
+      padding: 10px 18px;
+      border: 1px solid #d84ecd;
+      border-radius: 2px;
+      float: right;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1.9s;
+      white-space: nowrap;
+
+      &:hover {
+        background: #d84ecd;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-top: auto;
+        background: #65174d;
+        color: white;
+      }
+    }
+  }
+}
