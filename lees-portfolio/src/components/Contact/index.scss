@@ -24,6 +24,10 @@ $lees-pink: #d84ecd;
     min-width: 290px;
     margin-top: 20px;
 
+    :focus {
+      outline: none;
+    }
+
     ul {
       padding: 0;
       margin: 0;
