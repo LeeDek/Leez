@@ -2,6 +2,7 @@ $lees-pink: #d84ecd;
 
 .contact-page {
   padding-top: 2.8rem;
+  overflow-y: auto;
 
   .contact-title {
     @media (max-width: 768px) {
@@ -12,6 +13,10 @@ $lees-pink: #d84ecd;
 
   .text-zone {
     min-width: 300px;
+
+    .contact-text {
+      font-size: 15px;
+    }
   }
 
   .contact-form {

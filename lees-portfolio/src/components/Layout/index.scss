@@ -54,7 +54,7 @@ $lees-pink: #d84ecd;
     animation: fadeInContent 1s forwards;
     animation-delay: 1.5s;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 790px) {
       min-width: 300px;
       transform: translateY(-47%);
     }
@@ -77,7 +77,7 @@ $lees-pink: #d84ecd;
       }
 
       @media (max-width: 770px) {
-        font-size: 28px;
+        font-size: 32px;
       }
     }
 
@@ -109,7 +109,7 @@ $lees-pink: #d84ecd;
     }
 
     p {
-      font-size: 13px;
+      font-size: 14px;
       color: #dcdad0;
       font-family: sans-serif;
       font-weight: 300;

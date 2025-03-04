@@ -48,7 +48,7 @@ const Contact = () => {
               idx={15}
             />
           </h1>
-          <p>
+          <p className="contact-text">
             I'm excited to connect and collaborate with individuals or teams who
             share a passion for building impactful digital solutions. With a
             strong foundation in web and mobile development, I approach each
