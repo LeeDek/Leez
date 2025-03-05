@@ -109,6 +109,9 @@
       &:first-child {
         &::after {
           content: 'Home';
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     }
@@ -116,12 +119,18 @@
     .about-link {
       &:after {
         content: 'About';
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
     .contact-link {
       &:after {
         content: 'contact';
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
